@@ -1,0 +1,39 @@
+{
+    "name": "Python Development",
+    "image": "mcr.microsoft.com/devcontainers/python:3.11",
+    "features": {
+      "ghcr.io/devcontainers/features/python:1": {
+        "installTools": true
+      }
+    },
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "ms-python.python",
+          "ms-python.vscode-pylance",
+        //  "ms-pyright.pyright",
+          "charliermarsh.ruff",
+          "aaron-bond.better-comments",
+          "tamasfe.even-better-toml",
+          "usernamehw.errorlens"
+        ],
+        "settings": {
+          "python.linting.enabled": true,
+          "python.linting.pyrightEnabled": true,
+          "python.analysis.typeCheckingMode": "strict",
+          "[python]": {
+            "editor.formatOnSave": true,
+            "editor.defaultFormatter": "charliermarsh.ruff",
+            "editor.codeActionsOnSave": {
+              "source.fixAll": "explicit",
+              "source.organizeImports": "explicit"
+            }
+          },
+          "ruff.organizeImports": true
+        }
+      }
+    },
+    "postCreateCommand": "pip install -U pip && pip install uv pyright ruff",
+    "remoteUser": "vscode",
+    "postStartCommand": "mkdir -p .vscode && echo '{\"python.analysis.extraPaths\": [\"${containerWorkspaceFolder}\", \"${containerWorkspaceFolder}/src\"]}' > .vscode/settings.json"
+  }

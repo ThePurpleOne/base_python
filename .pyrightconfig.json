@@ -1,0 +1,26 @@
+{
+    "python.version": "3.11",
+    "reportUnknownMemberType": true,
+    "reportUnknownParameterType": true,
+    "reportUnknownVariableType": true,
+    "reportUnknownArgumentType": true,
+    "reportMissingTypeStubs": false,
+    "reportGeneralTypeIssues": true,
+    "reportUntypedFunctionDecorator": true,
+    "reportFunctionMemberAccess": true,
+    "reportOptionalMemberAccess": false,
+    "reportOptionalCall": false,
+    "reportOptionalOperand": false,
+    "reportOptionalIterable": false,
+    "reportOptionalContextManager": false,
+    "reportOptionalSubscript": false,
+    "typeCheckingMode": "strict",
+    "useLibraryCodeForTypes": true,
+    "exclude": [
+      ".venv",
+      ".git",
+      "node_modules",
+      "dist",
+      "build"
+    ]
+}
