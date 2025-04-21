@@ -33,7 +33,7 @@
         }
       }
     },
-    "postCreateCommand": "pip install -U pip && pip install uv pyright ruff",
+    "postCreateCommand": "pip install -U pip && pip install uv pyright ruff pre-commit && pre-commit install",
     "remoteUser": "vscode",
     "postStartCommand": "mkdir -p .vscode && echo '{\"python.analysis.extraPaths\": [\"${containerWorkspaceFolder}\", \"${containerWorkspaceFolder}/src\"]}' > .vscode/settings.json"
   }
