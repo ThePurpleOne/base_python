@@ -1,6 +1,8 @@
 {
     "name": "Python Development",
-    "image": "mcr.microsoft.com/devcontainers/python:3.11",
+    "build": {
+      "dockerfile": "Dockerfile"
+    },
     "features": {
       "ghcr.io/devcontainers/features/python:1": {
         "installTools": true
@@ -10,8 +12,6 @@
       "vscode": {
         "extensions": [
           "ms-python.python",
-          "ms-python.vscode-pylance",
-        //  "ms-pyright.pyright",
           "charliermarsh.ruff",
           "aaron-bond.better-comments",
           "tamasfe.even-better-toml",
@@ -21,6 +21,10 @@
           "python.linting.enabled": true,
           "python.linting.pyrightEnabled": true,
           "python.analysis.typeCheckingMode": "strict",
+          "python.analysis.extraPaths": [
+            "${containerWorkspaceFolder}",
+            "${containerWorkspaceFolder}/src"
+          ],
           "[python]": {
             "editor.formatOnSave": true,
             "editor.defaultFormatter": "charliermarsh.ruff",
@@ -33,7 +37,7 @@
         }
       }
     },
-    "postCreateCommand": "pip install -U pip && pip install uv pyright ruff pre-commit && pre-commit install",
-    "remoteUser": "vscode",
-    "postStartCommand": "mkdir -p .vscode && echo '{\"python.analysis.extraPaths\": [\"${containerWorkspaceFolder}\", \"${containerWorkspaceFolder}/src\"]}' > .vscode/settings.json"
+    "postCreateCommand": "./post-create.sh",
+    "remoteUser": "vscode"
   }
+  
