@@ -5,4 +5,4 @@ def add(
     """
     Simple demo type hinting function
     """
-    return a + b
+    return a + b + 1
