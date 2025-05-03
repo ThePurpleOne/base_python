@@ -1,4 +1,4 @@
-This is a template for a typed-checked, lint-ed, and formatted Python project.
+Template for a **typed-checked**, **lint-ed**, and **formatted** Python project.
 
 Setup using the standard `pyproject.toml` and managed via [Astral uv](https://docs.astral.sh/uv/)
 
@@ -11,9 +11,33 @@ It sets up:
 
 Run code
 ```bash
-uv run main.py
+uv run src/main.py
 ```
 
+# Needed tools
+You'll need some tools to be able to use the environment properly.
+
+## Astral uv
+[https://docs.astral.sh/uv/getting-started/installation](https://docs.astral.sh/uv/getting-started/installation)
+
+On windows:
+```bash
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
+On mac or linux:
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+## act
+
+Act is a tool to run GitHub Actions locally. It's not mandatory, but it's very useful to test the CI pipeline locally.
+
+Follow the instructions to install it on your system:
+[https://nektosact.com/installation/index.html](https://nektosact.com/installation/index.html)
+
+# Using the environment
 
 ## Pre-commit
 
@@ -50,8 +74,6 @@ Run type checker
 ```bash
 uv run pyright
 ```
-
-
 
 Run the CI locally using [act](https://github.com/nektos/act)
 ```bash
