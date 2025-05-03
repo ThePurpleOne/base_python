@@ -1,6 +1,6 @@
 import unittest
 
-from src.addition import add
+from src.operations import add
 
 
 class TestAddition(unittest.TestCase):

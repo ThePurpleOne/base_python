@@ -1,6 +1,6 @@
 import numpy as np
 
-from addition import add
+from operations import add
 
 
 def osef(a: float) -> float:
