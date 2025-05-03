@@ -1,6 +1,6 @@
 import numpy as np
 
-from operations import add
+from operations import add, subtract
 
 
 def osef(a: float) -> float:
@@ -14,7 +14,11 @@ def main():
 
     result = add(int(a), int(b))
     print(f"Adding {a} and {b}")
-    print(f"Result: {result}")
+    print(f"Addition Result: {result}")
+
+    subtraction_result = subtract(int(b), int(a))
+    print(f"Subtracting {a} from {b}")
+    print(f"Subtraction Result: {subtraction_result}")
 
 
 if __name__ == "__main__":
