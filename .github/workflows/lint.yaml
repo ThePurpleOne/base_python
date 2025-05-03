@@ -1,7 +1,7 @@
 name: format-lint-typecheck
 on:
   push:
-    branches: [main]
+    branches: [master, main]
 
 jobs:
   format-lint-typecheck:
