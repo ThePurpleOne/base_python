@@ -40,16 +40,17 @@ indent-width = 4
 # McCabe complexity (`C901`) by default.
 #select = ["E4", "E7", "E9", "F", "W", "SIM", ]
 #ignore = []
-select = [
-	'E',
-	'F',
-	'W',
-	'A',
-	'PLC',
-	'PLE',
-	'PLW',
-	'I'
-	]
+#select = [
+#	'E',
+#	'F',
+#	'W',
+#	'A',
+#	'PLC',
+#	'PLE',
+#	'PLW',
+#	'I'
+#	]
+select = ["ALL"]
 
 ignore = [
     #### modules
@@ -72,8 +73,10 @@ ignore = [
     "D106",
     "D107",
     "D200",
+    "D203", # Avoid issue with the ruff formatter
     "D205",
     "D212",
+    "D211", # incompatible with D203
     "D400",
     "D401",
     "D415",
@@ -88,6 +91,7 @@ ignore = [
 	"RET504", # return statement with no value
 	"PLW0603",
 	"PLW0602",
+	"PT009", # Let us use unittest-style assert methods
 ]
 
 # Allow fix for all enabled rules (when `--fix`) is provided.

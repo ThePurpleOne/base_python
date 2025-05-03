@@ -8,5 +8,35 @@ dependencies = [
     "numpy>=2.2.5",
 ]
 
+[dependency-groups]
+dev = [
+    "pyright>=1.1.400",
+    "pytest>=8.3.5",
+    "pytest-cov>=6.1.1",
+    "ruff>=0.11.8",
+]
+
 [tool.pyright]
-venvPath = ".venv"
+reportUnknownMemberType = true
+reportUnknownParameterType = true
+reportUnknownVariableType = true
+reportUnknownArgumentType = true
+reportMissingTypeStubs = false
+reportGeneralTypeIssues = true
+reportUntypedFunctionDecorator = true
+reportFunctionMemberAccess = true
+reportOptionalMemberAccess = false
+reportOptionalCall = false
+reportOptionalOperand = false
+reportOptionalIterable = false
+reportOptionalContextManager = false
+reportOptionalSubscript = false
+typeCheckingMode = "strict"
+useLibraryCodeForTypes = true
+exclude = [
+    ".venv",
+    ".git",
+    "node_modules",
+    "dist",
+    "build"
+]

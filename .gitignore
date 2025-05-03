@@ -9,6 +9,7 @@ wheels/
 **/.DS_Store
 **/*.DS_Store
 **/logs/*
+**/.ruff_cache
 
 # IGNORE COMPILED PACKAGE STUFF
 .Python
@@ -29,6 +30,11 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+
+.coverage
+htmlcov
+.pytest_cache
+
 
 # Virtual environments
 .venv
